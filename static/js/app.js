@@ -59,7 +59,12 @@ function filterTable(filterlist) {
 
   // 9. Loop through all of the filters and keep any data that
   // matches the filter values
+  filter.forEach()
+  for (filter in filters); {} // 
+  if (wordFrequency[word] !== undefined); {
+    wordFrequency[word] = +1;
   for (var i = 0; i < filterlist.length; i++) {
+    
     if (filterlist(i) === "date"); {
       filteredData = filteredData.filter(row => row.filterlist(i) === filters[i]);
     }
