@@ -51,43 +51,24 @@ function updateFilters() {
     // 6. Call function to apply all filters and rebuild the table
     filterTable(filters);
   }
-  
   // 7. Use this function to filter the table when data is entered.
-  function filterTable(filter) {
-    tbody.html("")
-    
+  function filterTable() {
+  
     // 8. Set the filtered data to the tableData.
     let filteredData = tableData;
   
     // 9. Loop through all of the filters and keep any data that
     // matches the filter values
-    for (var i = 0, i < filter.length, i++) {}
-      if (date)filteredData = filteredData.filter(row => row.datetime === date);
-    
-    } 
-    
-    var elements = document.select_all("li");
+    for (var = i; i < filters.length; i++ ) {
+      filteredData = filteredData.filter(row => row.filters[i] === filters[i]);
+    }
 
-    for (var i = 0, element; element = elements[i++];) {
-      if (d3.select("#datetime").property("value")) {
-
-      };
-      let date =d3.select("#datetime").property("value");
-      let city =d3.select("#city").property("value");
-      let state =d3.select("#state").property("value");
-      let country =d3.select("#country").property("value");
-      let shape =d3.select("#shape").property("value");
-      
-      if (element.type === "text" && element.value === "")
-          console.log("it's an empty textfield")
-      }
-  
     // 10. Finally, rebuild the table using the filtered data
     buildTable(filteredData);
   }
   
-  // 2. Attach an event to listen for changes to each filter
-  d3.selectAll("input").on("enter", updateFilters);
-  
-  // Build the table when the page loads
-  buildTable(tableData);
+// 2. Attach an event to listen for changes to each filter
+d3.selectAll("input").on("enter", updateFilters);
+
+// Build the table when the page loads
+buildTable(tableData);
