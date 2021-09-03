@@ -4,7 +4,8 @@
 The purpose of this project was to create an interactive website where users could analyze data of UFO sitings through various filters (date, city, state, country, and/or UFO shape). 
 
 ## Results
-When users initially visit the site, they will see a table of all the UFO sitings data and to the left several filter fields (See figure 1).
+When users initially visit the site, they will see a table of all the UFO sitings data and to the left several filter fields (See figure 1). Each filter field shows an example of how the desired query must be entered into the field. 
+*A note of caution.* Users must enter information in the fields *EXACTLY* as the data appears in the table column. 
 
 *figure 1*
 
