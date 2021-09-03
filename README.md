@@ -11,7 +11,7 @@ When users initially visit the site, they will see a table of all the UFO siting
 
 ![UFO_figure_1](https://github.com/jisellejones/UFOs/blob/main/static/images/UFO_figure_1.png)
 
-As users enter information into each field and then clicking "enter" or clicking outside the field, the table will atuomatically update to show data specific to the parameters entered (See figures 2 and 3). 
+As users enter information into each field and then press "enter" or click outside the field, the table will atuomatically update to show data specific to the parameters entered (See figures 2 and 3). 
 Again, a users must enter information in the fields *EXACTLY* as it appears in the table. Users can filter the table using one filter parameter or all filter parameters. 
 
 *figure 2*
