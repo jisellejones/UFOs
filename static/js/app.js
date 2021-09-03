@@ -52,23 +52,32 @@ function updateFilters() {
   filterTable(filters);
 }
 // 7. Use this function to filter the table when data is entered.
-function filterTable(filterlist) {
+function filterTable(filterList) {
   
   // 8. Set the filtered data to the tableData.
   let filteredData = tableData;
 
   // 9. Loop through all of the filters and keep any data that
   // matches the filter values
-  filter.forEach()
-  for (filter in filters); {} // 
-  if (wordFrequency[word] !== undefined); {
-    wordFrequency[word] = +1;
-  for (var i = 0; i < filterlist.length; i++) {
-    
-    if (filterlist(i) === "date"); {
-      filteredData = filteredData.filter(row => row.filterlist(i) === filters[i]);
-    }
+  //if the key matches a column then update the value
+  for ([key, value] of Object.entries(filterList)) { 
+    console.log(key);
+    console.log(value); 
+    filteredData = filteredData.filter(row => row.datetime === value);
   }
+  // filteredData = filteredData.filter(row => {
+  //   for ([key, value] of Object.entries(filterList)) {
+  //     if (key === "datetime") { 
+  //       row.key === value;
+  //     }
+  //   }
+  // });
+  // for (var i = 0; i < filterlist.length; i++) {
+    
+  //   if (filterlist(i) === "date"); {
+  //     filteredData = filteredData.filter(row => row.filterlist(i) === filters[i]);
+  //   }
+  // }
   // 10. Finally, rebuild the table using the filtered data
   buildTable(filteredData);
 }
