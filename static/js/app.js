@@ -63,21 +63,33 @@ function filterTable(filterList) {
   for ([key, value] of Object.entries(filterList)) { 
     console.log(key);
     console.log(value); 
-    filteredData = filteredData.filter(row => row.datetime === value);
+    if (key === "datetime") {
+      filteredData = filteredData.filter(row => row.datetime === value);
+      } else {
+        console.log("Date field is blank.")
+      }
+    if (key === "city") {
+      filteredData = filteredData.filter(row => row.city == value);
+    } else {
+      console.log("City field is blank.")
+    }
+    if (key === "state") {
+      filteredData = filteredData.filter(row => row.state === value);
+    } else {
+      console.log("State field is blank.")
+    }
+    if (key === "country") {
+      filteredData = filteredData.filter(row => row.country === value);
+    } else {
+      console.log("Country field is blank.")
+    }
+    if (key === "shape") {
+      filteredData = filteredData.filter(row => row.shape === value);
+    } else {
+      console.log("Shape field is blank.")
+    }
   }
-  // filteredData = filteredData.filter(row => {
-  //   for ([key, value] of Object.entries(filterList)) {
-  //     if (key === "datetime") { 
-  //       row.key === value;
-  //     }
-  //   }
-  // });
-  // for (var i = 0; i < filterlist.length; i++) {
-    
-  //   if (filterlist(i) === "date"); {
-  //     filteredData = filteredData.filter(row => row.filterlist(i) === filters[i]);
-  //   }
-  // }
+  
   // 10. Finally, rebuild the table using the filtered data
   buildTable(filteredData);
 }
